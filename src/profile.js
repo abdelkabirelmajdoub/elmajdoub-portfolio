@@ -2,12 +2,11 @@
 export const profile = {
   name: 'elmajdoub',
   role: 'Frontend developer',
-  availability: 'Open to frontend internships',
   email: 'abdelkabir.elmajdoub@etu.uae.ac.ma',
   github: 'https://github.com/abdelkabirelmajdoub',
   linkedin: 'https://www.linkedin.com/in/abdelkabir-el-majdoub-2579431b7/',
   location: 'Tetouan',
-  about: 'I’m learning to turn ideas into responsive interfaces with React, Tailwind CSS, and Vite. I’m looking for a frontend internship where I can contribute, ask good questions, and grow through real work.',
+  about: 'I’m a frontend developer based in Tetouan, learning by building with React, Tailwind CSS, and Vite. I enjoy turning a rough idea into a clear, responsive interface — and understanding how every piece works.',
 };
 
 export const projects = [
