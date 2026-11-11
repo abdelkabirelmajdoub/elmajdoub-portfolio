@@ -86,11 +86,11 @@ function App() {
     <a href="#main" className="skip-link">Skip to content</a>
     <header className="site-header">
       <a href="#" className="wordmark" aria-label="Elmajdoub home">e<span>.</span></a>
-      <nav className="desktop-nav" aria-label="Main navigation"><a href="#work">Work <span>01</span></a><a href="#about">About</a><a href="#contact">Let’s talk <Arrow/></a></nav>
+      <nav className="desktop-nav" aria-label="Main navigation"><a href="#work">Work <span>02</span></a><a href="#about">About</a><a href="#contact">Let’s talk <Arrow/></a></nav>
       <a className="header-github mono" href={profile.github} target="_blank" rel="noreferrer">GITHUB <Arrow/></a>
       <button className="menu-toggle" aria-expanded={menuOpen} aria-controls="mobile-nav" onClick={() => setMenuOpen(!menuOpen)}>{menuOpen ? 'Close' : 'Menu'} <span>{menuOpen ? '−' : '+'}</span></button>
     </header>
-    <nav id="mobile-nav" className={`mobile-nav ${menuOpen ? 'open' : ''}`} aria-label="Mobile navigation" inert={!menuOpen ? true : undefined}><a onClick={closeMenu} href="#work">Work <span>01</span></a><a onClick={closeMenu} href="#about">About</a><a onClick={closeMenu} href="#contact">Let’s talk <Arrow/></a></nav>
+    <nav id="mobile-nav" className={`mobile-nav ${menuOpen ? 'open' : ''}`} aria-label="Mobile navigation" inert={!menuOpen ? true : undefined}><a onClick={closeMenu} href="#work">Work <span>02</span></a><a onClick={closeMenu} href="#about">About</a><a onClick={closeMenu} href="#contact">Let’s talk <Arrow/></a></nav>
     <main id="main">
       <section className="hero" aria-labelledby="hero-name">
         <div className="hero-top"><span className="eyebrow hero-enter">FRONTEND DEVELOPER / PORTFOLIO</span><span className="eyebrow hero-enter">INDEPENDENT MIND. DIGITAL CRAFT.</span></div>
@@ -105,6 +105,10 @@ function App() {
           <button className="project-visual-button" onClick={() => setShowProject(true)} aria-label={`Read about ${project.category}`}><ProjectPreview/><span className="project-open"><Arrow/></span></button>
           <div className="project-info"><div className="project-title"><span className="project-number mono">{project.number}</span><div><div className="project-category mono">{project.category} <span>— {project.status}</span></div><h3><button onClick={() => setShowProject(true)}>{project.title}</button></h3><p>{project.description}</p></div></div><div className="project-meta"><span className="mono">{project.tags.join(' / ')}</span><button className="text-link" onClick={() => setShowProject(true)}>Project notes <Arrow/></button></div></div>
         </article>)}
+        <article className="featured-project" data-reveal>
+          <a className="project-visual-button" href="https://sideout-silk-iota.vercel.app/" aria-label="Open Sideout volleyball demo"><div className="project-art" style={{background:'#123db5',color:'#fff',display:'grid',placeItems:'center',padding:'3rem'}}><div><p style={{fontSize:'1rem',color:'#f5d547'}}>Sideout / Volleyball match finder</p><h3 style={{fontSize:'clamp(2.5rem,6vw,5rem)',lineHeight:1.05}}>Less scrolling.<br/>More volleyball.</h3><p>Find your next game.</p></div></div><span className="project-open"><Arrow/></span></a>
+          <div className="project-info"><div className="project-title"><span className="project-number mono">02</span><div><div className="project-category mono">Interactive frontend <span>— Demo</span></div><h3><a href="https://sideout-silk-iota.vercel.app/">Sideout: find your next game.</a></h3><p>A volleyball match finder with court and level filters, local reservations, and an original court illustration. All matches are illustrative.</p></div></div><div className="project-meta"><span className="mono">HTML / CSS / JavaScript</span><a className="text-link" href="https://sideout-silk-iota.vercel.app/portfolio.html">Project story <Arrow/></a><a className="text-link" href="https://github.com/abdelkabirelmajdoub/elmajdoub-portfolio/tree/main/public/sideout" target="_blank" rel="noreferrer">Source code <Arrow/></a></div></div>
+        </article>
         <div className="next-projects" data-reveal><span className="eyebrow">ON THE HORIZON</span>{upcoming.map(project => <div className="upcoming-row" key={project.number}><span className="mono upcoming-number">{project.number}</span><h3>{project.title}</h3><span className="upcoming-detail">{project.detail}</span><span className="upcoming-symbol" aria-hidden="true">↗</span></div>)}<p className="future-note">Ideas on the roadmap — I’ll share the live projects and code as I build them.</p></div>
       </section>
 
