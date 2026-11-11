@@ -48,6 +48,7 @@ function App() {
       </div><ProjectPreview/></section>
       <section id="projects" aria-labelledby="project-heading"><h2 id="project-heading">Project index</h2>
         <article className="item"><span className="tile sport" aria-hidden="true">S.</span><div className="info"><h3>Sideout</h3><p>Find a court, filter games by level and reserve a place in a demo match.</p></div><div className="meta"><span>HTML, CSS, JavaScript</span><div><a href={demo + 'portfolio.html'}>Project story</a><a href={profile.github + '/sidout'}>Code</a></div></div></article>
+        <article className="item"><span className="tile sport" aria-hidden="true">T.</span><div className="info"><h3>Touchline</h3><p>Football fixtures in your timezone, with player, coach and stadium cards.</p></div><div className="meta"><span>JavaScript, Node.js</span><a href="https://touchline-clock.vercel.app/">Launch project</a></div></article>
         <article className="item"><span className="tile personal" aria-hidden="true">e.</span><div className="info"><h3>Personal portfolio</h3><p>A responsive showcase with a switchable project preview.</p></div><div className="meta"><span>React, Vite</span><a href={profile.github + '/elmajdoub-portfolio'}>View source</a></div></article>
       </section>
     </main>
